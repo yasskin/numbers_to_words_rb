@@ -28,11 +28,15 @@ describe('Fixnum#int_words') do
   end
 
   it("return a compound number over 200.") do
+    expect((320).int_words()).to(eq("three hundred twenty"))
+  end
+
+  it("return a compound number over 200.") do
     expect((221).int_words()).to(eq("two hundred twenty one"))
   end
 
   it("return a compound number over 1000.") do
-    expect((1002).int_words()).to(eq("one thousand two"))
+    expect((1202).int_words()).to(eq("one thousand two hundred two"))
   end
 
 end
